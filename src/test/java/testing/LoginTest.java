@@ -12,9 +12,13 @@ import util.RetryAnalyzer;
 public class LoginTest extends CommonMethods{
 	
 	
-	@Test(enabled = true, retryAnalyzer = RetryAnalyzer.class)
+	@Test(enabled = true, retryAnalyzer = RetryAnalyzer.class, groups = "smoke")
 	public void test1() {
 		BaseClass.getDriver().findElement(By.xpath("dsawda")).click();
+	}
+	
+	public void test2() {
+		System.out.println("hi");
 	}
 
 }
